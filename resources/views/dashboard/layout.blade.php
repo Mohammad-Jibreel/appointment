@@ -13,7 +13,7 @@
 
         <div class="container-fluid mb-4">
 
-            @yield('contentBody')
+            @yield('content')
         </div>
                 <!-- /.container-fluid -->
 

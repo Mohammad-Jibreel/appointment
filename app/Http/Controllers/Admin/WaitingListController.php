@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\WorkingHour;
+use App\Models\WaitingList;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class WorkingHourController extends Controller
+class WaitingListController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
         //
@@ -35,7 +36,7 @@ class WorkingHourController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(WorkingHour $workingHour)
+    public function show(WaitingList $waitingList)
     {
         //
     }
@@ -43,7 +44,7 @@ class WorkingHourController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(WorkingHour $workingHour)
+    public function edit(WaitingList $waitingList)
     {
         //
     }
@@ -51,7 +52,7 @@ class WorkingHourController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, WorkingHour $workingHour)
+    public function update(Request $request, WaitingList $waitingList)
     {
         //
     }
@@ -59,7 +60,7 @@ class WorkingHourController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(WorkingHour $workingHour)
+    public function destroy(WaitingList $waitingList)
     {
         //
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\ServiceProvider;
+use App\Models\WorkingHour;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ServiceProviderController extends Controller
+class WorkingHourController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,7 @@ class ServiceProviderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ServiceProvider $serviceProvider)
+    public function show(WorkingHour $workingHour)
     {
         //
     }
@@ -43,7 +43,7 @@ class ServiceProviderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ServiceProvider $serviceProvider)
+    public function edit(WorkingHour $workingHour)
     {
         //
     }
@@ -51,7 +51,7 @@ class ServiceProviderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ServiceProvider $serviceProvider)
+    public function update(Request $request, WorkingHour $workingHour)
     {
         //
     }
@@ -59,7 +59,7 @@ class ServiceProviderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ServiceProvider $serviceProvider)
+    public function destroy(WorkingHour $workingHour)
     {
         //
     }

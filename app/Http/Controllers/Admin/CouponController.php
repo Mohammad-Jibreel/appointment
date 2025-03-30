@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Availability;
+use App\Models\Coupon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AvailabilityController extends Controller
+class CouponController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
@@ -35,7 +36,7 @@ class AvailabilityController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Availability $availability)
+    public function show(Coupon $coupon)
     {
         //
     }
@@ -43,7 +44,7 @@ class AvailabilityController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Availability $availability)
+    public function edit(Coupon $coupon)
     {
         //
     }
@@ -51,7 +52,7 @@ class AvailabilityController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Availability $availability)
+    public function update(Request $request, Coupon $coupon)
     {
         //
     }
@@ -59,7 +60,7 @@ class AvailabilityController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Availability $availability)
+    public function destroy(Coupon $coupon)
     {
         //
     }

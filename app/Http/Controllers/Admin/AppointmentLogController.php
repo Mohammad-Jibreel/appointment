@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Coupon;
+use App\Models\AppointmentLog;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CouponController extends Controller
+class AppointmentLogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,7 @@ class CouponController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Coupon $coupon)
+    public function show(AppointmentLog $appointmentLog)
     {
         //
     }
@@ -43,7 +43,7 @@ class CouponController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Coupon $coupon)
+    public function edit(AppointmentLog $appointmentLog)
     {
         //
     }
@@ -51,7 +51,7 @@ class CouponController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Coupon $coupon)
+    public function update(Request $request, AppointmentLog $appointmentLog)
     {
         //
     }
@@ -59,7 +59,7 @@ class CouponController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Coupon $coupon)
+    public function destroy(AppointmentLog $appointmentLog)
     {
         //
     }

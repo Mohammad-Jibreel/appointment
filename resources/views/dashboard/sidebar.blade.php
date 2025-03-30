@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-calendar-check"></i>
         </div>
@@ -12,7 +12,7 @@
 
     <!-- Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="dashboard">
+        <a class="nav-link" href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
@@ -22,7 +22,7 @@
 
     <!-- Appointments Management -->
     <li class="nav-item">
-        <a class="nav-link" href="appointments">
+        <a class="nav-link" href="{{ route('admin.appointments.index') }}">
             <i class="fas fa-fw fa-calendar-alt"></i>
             <span>Appointments</span>
         </a>
@@ -30,7 +30,7 @@
 
     <!-- Services Management -->
     <li class="nav-item">
-        <a class="nav-link" href="services">
+        <a class="nav-link" href="{{ route('admin.services.index') }}">
             <i class="fas fa-fw fa-concierge-bell"></i>
             <span>Services</span>
         </a>
@@ -38,7 +38,7 @@
 
     <!-- Service Providers -->
     <li class="nav-item">
-        <a class="nav-link" href="service-providers">
+        <a class="nav-link" href="{{ route('admin.service-providers.index') }}">
             <i class="fas fa-fw fa-user-tie"></i>
             <span>Service Providers</span>
         </a>
@@ -46,7 +46,7 @@
 
     <!-- Clients / Users -->
     <li class="nav-item">
-        <a class="nav-link" href="users">
+        <a class="nav-link" href="{{ route('admin.users.index') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Users</span>
         </a>
@@ -54,7 +54,7 @@
 
     <!-- Categories -->
     <li class="nav-item">
-        <a class="nav-link" href="categories">
+        <a class="nav-link" href="{{ route('admin.categories.index') }}">
             <i class="fas fa-fw fa-tags"></i>
             <span>Categories</span>
         </a>
@@ -62,7 +62,7 @@
 
     <!-- Availability & Working Hours -->
     <li class="nav-item">
-        <a class="nav-link" href="availability">
+        <a class="nav-link" href="{{ route('admin.settings') }}">
             <i class="fas fa-fw fa-clock"></i>
             <span>Availability</span>
         </a>
@@ -70,7 +70,7 @@
 
     <!-- Payments & Transactions -->
     <li class="nav-item">
-        <a class="nav-link" href="payments">
+        <a class="nav-link" href="{{ route('admin.payments.index') }}">
             <i class="fas fa-fw fa-credit-card"></i>
             <span>Payments</span>
         </a>
@@ -78,7 +78,7 @@
 
     <!-- Coupons & Discounts -->
     <li class="nav-item">
-        <a class="nav-link" href="coupons">
+        <a class="nav-link" href="{{ route('admin.coupons.index') }}">
             <i class="fas fa-fw fa-tag"></i>
             <span>Coupons & Discounts</span>
         </a>
@@ -86,7 +86,7 @@
 
     <!-- Reviews & Feedback -->
     <li class="nav-item">
-        <a class="nav-link" href="reviews">
+        <a class="nav-link" href="{{ route('admin.reviews.index') }}">
             <i class="fas fa-fw fa-star"></i>
             <span>Reviews</span>
         </a>
@@ -94,7 +94,7 @@
 
     <!-- Waiting List -->
     <li class="nav-item">
-        <a class="nav-link" href="waiting-list">
+        <a class="nav-link" href="{{ route('admin.waiting-list.index') }}">
             <i class="fas fa-fw fa-hourglass-half"></i>
             <span>Waiting List</span>
         </a>
@@ -102,7 +102,7 @@
 
     <!-- Notifications -->
     <li class="nav-item">
-        <a class="nav-link" href="notifications">
+        <a class="nav-link" href="{{ route('admin.notifications.index') }}">
             <i class="fas fa-fw fa-bell"></i>
             <span>Notifications</span>
         </a>
@@ -110,7 +110,7 @@
 
     <!-- Reports & Analytics -->
     <li class="nav-item">
-        <a class="nav-link" href="reports">
+        <a class="nav-link" href="{{ route('admin.reports') }}">
             <i class="fas fa-fw fa-chart-bar"></i>
             <span>Reports & Analytics</span>
         </a>
@@ -118,7 +118,7 @@
 
     <!-- Admin Management -->
     <li class="nav-item">
-        <a class="nav-link" href="admins">
+        <a class="nav-link" href="{{ route('admin.admins.index') }}">
             <i class="fas fa-fw fa-user-shield"></i>
             <span>Admin Management</span>
         </a>

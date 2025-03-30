@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\AppointmentLog;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AppointmentLogController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +34,7 @@ class AppointmentLogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AppointmentLog $appointmentLog)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +42,7 @@ class AppointmentLogController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AppointmentLog $appointmentLog)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +50,7 @@ class AppointmentLogController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AppointmentLog $appointmentLog)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +58,7 @@ class AppointmentLogController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AppointmentLog $appointmentLog)
+    public function destroy(string $id)
     {
         //
     }
