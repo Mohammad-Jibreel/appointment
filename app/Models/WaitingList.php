@@ -11,7 +11,7 @@ class WaitingList extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'service_id', 'preferred_date'
+        'user_id', 'service_id', 'preferred_date','name','email',
     ];
 
     public function user()

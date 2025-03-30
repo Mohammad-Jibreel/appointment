@@ -16,7 +16,6 @@ class AvailabilityController extends Controller
         // Retrieve all availability records
         $availabilities = Availability::all();
 
-        dd($availabilities);
         return view('admin.availabilities.index', compact('availabilities'));
     }
 

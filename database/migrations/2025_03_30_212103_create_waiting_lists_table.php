@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('waiting_lists', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name')->nullable();  // Make 'name' nullable
+            $table->string('email')->unique();   // Email of the person
+            $table->string('phone')->nullable(); // Phone number (optional)
+            $table->timestamps();         // Created at & Updated at
+
         });
     }
 

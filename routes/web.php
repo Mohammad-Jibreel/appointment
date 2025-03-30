@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\WaitingListController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AvailabilityController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -58,7 +59,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('notifications', NotificationController::class)->names('admin.notifications');
 
     // Reports & Analytics
-    Route::get('reports', [ReportController::class, 'index'])->name('admin.reports');
+    Route::resource('reports', ReportController::class)->names('admin.reports');
+
 
     // Settings
     Route::get('settings', [SettingController::class, 'index'])->name('admin.settings');
@@ -72,6 +74,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Admin Management
     Route::resource('admins', AdminController::class)->names('admin.admins');
 
-    Route::resource('availabilities', AvailabilityController::class);
+    Route::resource('availabilities', AvailabilityController::class)->names('admin.availabilities');
 
 });

@@ -62,7 +62,7 @@
 
     <!-- Availability & Working Hours -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.settings') }}">
+        <a class="nav-link" href="{{ route('admin.availabilities.index') }}">
             <i class="fas fa-fw fa-clock"></i>
             <span>Availability</span>
         </a>
@@ -110,7 +110,7 @@
 
     <!-- Reports & Analytics -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.reports') }}">
+        <a class="nav-link" href="{{ route('admin.reports.index') }}">
             <i class="fas fa-fw fa-chart-bar"></i>
             <span>Reports & Analytics</span>
         </a>

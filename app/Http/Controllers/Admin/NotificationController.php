@@ -13,7 +13,9 @@ class NotificationController extends Controller
      */
     public function index()
     {
-        //
+        // Get all notifications
+        $notifications = Notification::all();
+        return view('admin.notifications.index', compact('notifications'));
     }
 
     /**
@@ -21,7 +23,7 @@ class NotificationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.notifications.create');
     }
 
     /**
@@ -29,7 +31,22 @@ class NotificationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the request data
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'message' => 'required|string',
+            'type' => 'required|string', // e.g., 'info', 'warning', 'error'
+        ]);
+
+        // Create a new notification
+        Notification::create([
+            'title' => $request->title,
+            'message' => $request->message,
+            'type' => $request->type,
+        ]);
+
+        // Redirect with success message
+        return redirect()->route('admin.notifications.index')->with('success', 'Notification created successfully!');
     }
 
     /**
@@ -37,7 +54,8 @@ class NotificationController extends Controller
      */
     public function show(Notification $notification)
     {
-        //
+        // Return the view for showing a specific notification
+        return view('admin.notifications.show', compact('notification'));
     }
 
     /**
@@ -45,7 +63,8 @@ class NotificationController extends Controller
      */
     public function edit(Notification $notification)
     {
-        //
+        // Return the view for editing a specific notification
+        return view('admin.notifications.edit', compact('notification'));
     }
 
     /**
@@ -53,7 +72,22 @@ class NotificationController extends Controller
      */
     public function update(Request $request, Notification $notification)
     {
-        //
+        // Validate the request data
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'message' => 'required|string',
+            'type' => 'required|string',
+        ]);
+
+        // Update the notification data
+        $notification->update([
+            'title' => $request->title,
+            'message' => $request->message,
+            'type' => $request->type,
+        ]);
+
+        // Redirect with success message
+        return redirect()->route('admin.notifications.index')->with('success', 'Notification updated successfully!');
     }
 
     /**
@@ -61,6 +95,10 @@ class NotificationController extends Controller
      */
     public function destroy(Notification $notification)
     {
-        //
+        // Delete the notification
+        $notification->delete();
+
+        // Redirect with success message
+        return redirect()->route('admin.notifications.index')->with('success', 'Notification deleted successfully!');
     }
 }

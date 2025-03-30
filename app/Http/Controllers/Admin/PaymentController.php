@@ -13,23 +13,11 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        //
-    }
+        // Retrieve all payments from the database
+        $payments = Payment::all();
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+        // Return the view and pass the payments data
+        return view('admin.payments.index', compact('payments'));
     }
 
     /**
@@ -37,30 +25,7 @@ class PaymentController extends Controller
      */
     public function show(Payment $payment)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Payment $payment)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Payment $payment)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Payment $payment)
-    {
-        //
+        // Return the show view and pass the specific payment record
+        return view('admin.payments.show', compact('payment'));
     }
 }
